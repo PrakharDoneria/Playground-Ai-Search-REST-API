@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 
-// Define the handler function for incoming requests
 const handler = async (request: Request): Promise<Response> => {
     const url = new URL(request.url);
 
@@ -11,7 +10,7 @@ const handler = async (request: Request): Promise<Response> => {
             return new Response(JSON.stringify({ error: "Please provide a search query." }), { status: 400 });
         }
 
-        const searchUrl = `https://playground.com/_next/data/ba0kOy0FZsenBfbBIZHrR/search.json?q=${encodeURIComponent(query)}`;
+        const searchUrl = `https://playground.com/_next/data/DKheFsybTy-HQ-Exsbzy9/search.json?q=${encodeURIComponent(query)}`;
 
         try {
             const response = await fetch(searchUrl);
